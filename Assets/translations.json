@@ -1,0 +1,474 @@
+{
+  "Sinu igapäevane pood": [
+    "Магазин на каждый день",
+    "Your everyday shop"
+  ],
+  "HEA PÄEV ALGAB SIIT": [
+    "ХОРОШИЙ ДЕНЬ — ЗДЕСЬ",
+    "A GOOD DAY STARTS HERE"
+  ],
+  "01    Pood": [
+    "01    Магазин",
+    "01    Shop"
+  ],
+  "02    Ostukorv ja arve": [
+    "02    Корзина и счёт",
+    "02    Cart & invoice"
+  ],
+  "03    Tootehaldus": [
+    "03    Товары",
+    "03    Products"
+  ],
+  "Administraator": [
+    "Администратор",
+    "Administrator"
+  ],
+  "Klient": [
+    "Покупатель",
+    "Customer"
+  ],
+  "Logi välja  →": [
+    "Выйти  →",
+    "Sign out  →"
+  ],
+  "Pood": [
+    "Магазин",
+    "Shop"
+  ],
+  "POOD  /  VÄRSKE VALIK": [
+    "МАГАЗИН  /  СВЕЖИЙ ВЫБОР",
+    "SHOP  /  FRESH PICKS"
+  ],
+  "Midagi head igasse päeva.": [
+    "Всё для хорошего дня.",
+    "Good things for every day."
+  ],
+  "Leia oma lemmikud ja pane ostukorv kokku paari klõpsuga.": [
+    "Выбирай любимые продукты и добавляй в корзину.",
+    "Find your favourites and fill your basket in a few clicks."
+  ],
+  "Otsi toote nime järgi…": [
+    "Поиск по названию…",
+    "Search products…"
+  ],
+  "Nime järgi": [
+    "По названию",
+    "Name"
+  ],
+  "Hind: odavam enne": [
+    "Цена: по возрастанию",
+    "Price: low to high"
+  ],
+  "Hind: kallim enne": [
+    "Цена: по убыванию",
+    "Price: high to low"
+  ],
+  "Kõik tooted": [
+    "Все товары",
+    "All products"
+  ],
+  "Joogid": [
+    "Напитки",
+    "Drinks"
+  ],
+  "Puu- ja köögiviljad": [
+    "Овощи и фрукты",
+    "Fruit & vegetables"
+  ],
+  "Maiustused": [
+    "Сладости",
+    "Sweets"
+  ],
+  "Tooteid ei leitud. Proovi teist otsingut või kategooriat.": [
+    "Ничего не найдено. Измени запрос или категорию.",
+    "No products found. Try another search or category."
+  ],
+  "Otsas": [
+    "Нет в наличии",
+    "Sold out"
+  ],
+  "+  Lisa korvi": [
+    "+  В корзину",
+    "+  Add to cart"
+  ],
+  "Laost otsas": [
+    "Нет в наличии",
+    "Sold out"
+  ],
+  "Tere tulemast": [
+    "Добро пожаловать",
+    "Welcome"
+  ],
+  "Väikesed valikud.\nHea igapäev.": [
+    "Простой выбор.\nХороший день.",
+    "Small choices.\nBetter days."
+  ],
+  "Värske valik, lihtne ostukorv\nja kõik vajalik ühes kohas.": [
+    "Свежие продукты, удобная корзина\nи всё нужное в одном месте.",
+    "Fresh picks, an easy basket\nand everything in one place."
+  ],
+  "SINU IGAPÄEVANE POOD  /  EST. 2026": [
+    "МАГАЗИН НА КАЖДЫЙ ДЕНЬ / 2026",
+    "YOUR EVERYDAY SHOP / EST. 2026"
+  ],
+  "Tere tulemast tagasi": [
+    "С возвращением",
+    "Welcome back"
+  ],
+  "Logi sisse ja leia oma lemmikud.": [
+    "Войди и выбери любимые продукты.",
+    "Sign in and find your favourites."
+  ],
+  "E-post": [
+    "Электронная почта",
+    "Email"
+  ],
+  "Parool": [
+    "Пароль",
+    "Password"
+  ],
+  "Näita parooli": [
+    "Показать пароль",
+    "Show password"
+  ],
+  "Logi sisse    →": [
+    "Войти    →",
+    "Sign in    →"
+  ],
+  "Vale e-post või parool. Proovi uuesti.": [
+    "Неверная почта или пароль. Попробуй ещё раз.",
+    "Incorrect email or password. Try again."
+  ],
+  "Tootehaldus": [
+    "Управление товарами",
+    "Product management"
+  ],
+  "Otsi toodet…": [
+    "Поиск товара…",
+    "Search products…"
+  ],
+  "TÖÖLAUD  /  ADMINISTRAATOR": [
+    "ПАНЕЛЬ  /  АДМИНИСТРАТОР",
+    "WORKSPACE / ADMINISTRATOR"
+  ],
+  "Toote andmed": [
+    "Данные товара",
+    "Product details"
+  ],
+  "Toote nimetus": [
+    "Название товара",
+    "Product name"
+  ],
+  "Laoseis · tk": [
+    "Остаток · шт.",
+    "Stock · units"
+  ],
+  "Hind · €": [
+    "Цена · €",
+    "Price · €"
+  ],
+  "Kategooria": [
+    "Категория",
+    "Category"
+  ],
+  "Vali pilt…": [
+    "Выбрать фото…",
+    "Choose photo…"
+  ],
+  "Salvesta toode": [
+    "Сохранить товар",
+    "Save product"
+  ],
+  "+  Uus toode": [
+    "+  Новый",
+    "+  New product"
+  ],
+  "Kustuta": [
+    "Удалить",
+    "Delete"
+  ],
+  "Uue toote lisamine": [
+    "Добавление нового товара",
+    "Adding a new product"
+  ],
+  "Pildi avamine ebaõnnestus.": [
+    "Не удалось открыть изображение.",
+    "Could not open the image."
+  ],
+  "Sisesta nimi (1–120 märki) ja vali kategooria.": [
+    "Введи название (1–120 символов) и выбери категорию.",
+    "Enter a name (1–120 characters) and select a category."
+  ],
+  "Toodet enam ei ole.": [
+    "Товар больше не существует.",
+    "The product no longer exists."
+  ],
+  "Toode on salvestatud.": [
+    "Товар сохранён.",
+    "Product saved."
+  ],
+  "Salvestamine ebaõnnestus.": [
+    "Не удалось сохранить.",
+    "Could not save."
+  ],
+  "Kustutamine": [
+    "Удаление",
+    "Delete product"
+  ],
+  "Toode kustutatud.": [
+    "Товар удалён.",
+    "Product deleted."
+  ],
+  "Kustutamine ebaõnnestus": [
+    "Не удалось удалить",
+    "Could not delete"
+  ],
+  "Toode": [
+    "Товар",
+    "Product"
+  ],
+  "Laos": [
+    "Остаток",
+    "Stock"
+  ],
+  "Hind": [
+    "Цена",
+    "Price"
+  ],
+  "Kogus": [
+    "Кол-во",
+    "Qty"
+  ],
+  "Summa": [
+    "Сумма",
+    "Amount"
+  ],
+  "Ostukorv ja arve": [
+    "Корзина и счёт",
+    "Cart & invoice"
+  ],
+  "Saaja e-post": [
+    "Почта получателя",
+    "Recipient email"
+  ],
+  "OSTUKORV  /  SINU VALIK": [
+    "КОРЗИНА  /  ТВОЙ ВЫБОР",
+    "CART / YOUR PICKS"
+  ],
+  "Kõik hea ühes korvis.": [
+    "Всё хорошее в одной корзине.",
+    "All the good things in one basket."
+  ],
+  "Kontrolli koguseid ja salvesta oma valik PDF-arvena.": [
+    "Проверь количество и сохрани счёт в PDF.",
+    "Check quantities and save your selection as a PDF invoice."
+  ],
+  "Muuda kogust": [
+    "Изменить кол-во",
+    "Update quantity"
+  ],
+  "Eemalda": [
+    "Убрать",
+    "Remove"
+  ],
+  "Kokkuvõte": [
+    "Итого",
+    "Summary"
+  ],
+  "TASUMISEKS": [
+    "К ОПЛАТЕ",
+    "TOTAL DUE"
+  ],
+  "Arve loomine ei kinnita makset\nega vähenda laoseisu.": [
+    "Создание счёта не подтверждает\nоплату и не списывает остатки.",
+    "Creating an invoice does not confirm\npayment or reduce stock."
+  ],
+  "Salvesta PDF-arve  ↓": [
+    "Сохранить PDF-счёт  ↓",
+    "Save PDF invoice  ↓"
+  ],
+  "Ava viimane arve": [
+    "Открыть последний счёт",
+    "Open latest invoice"
+  ],
+  "SAADA ARVE E-POSTIGA": [
+    "ОТПРАВИТЬ СЧЁТ ПО ПОЧТЕ",
+    "EMAIL THE INVOICE"
+  ],
+  "Saada arve": [
+    "Отправить счёт",
+    "Send invoice"
+  ],
+  "Ostukorv on tühi. Vali menüüst Pood ja lisa oma lemmikud.": [
+    "Корзина пуста. Открой «Магазин» и добавь товары.",
+    "Your cart is empty. Open Shop and add your favourites."
+  ],
+  "Korv uuendatud. Loo uus arve.": [
+    "Корзина обновлена. Создай новый счёт.",
+    "Cart updated. Create a new invoice."
+  ],
+  "Soovitud kogust ei ole laos.": [
+    "Такого количества нет на складе.",
+    "The requested quantity is not in stock."
+  ],
+  "PDF-arve salvestatud.": [
+    "PDF-счёт сохранён.",
+    "PDF invoice saved."
+  ],
+  "PDF loomine ebaõnnestus.": [
+    "Не удалось создать PDF.",
+    "Could not create the PDF."
+  ],
+  "Loo kõigepealt PDF-arve.": [
+    "Сначала создай PDF-счёт.",
+    "Create a PDF invoice first."
+  ],
+  "Sisesta korrektne e-post.": [
+    "Введи корректный адрес почты.",
+    "Enter a valid email address."
+  ],
+  "E-post pole seadistatud. SMTP juhend on README failis. PDF-i saad salvestada.": [
+    "Почта не настроена. Инструкция — EMAIL_SETUP.md. PDF можно сохранить.",
+    "Email is not configured. See EMAIL_SETUP.md. You can still save the PDF."
+  ],
+  "Arve saadetud.": [
+    "Счёт отправлен.",
+    "Invoice sent."
+  ],
+  "Arve": [
+    "Счёт",
+    "Invoice"
+  ],
+  "ARVE": [
+    "СЧЁТ",
+    "INVOICE"
+  ],
+  "Tooded · arve": [
+    "Tooded · счёт",
+    "Tooded · invoice"
+  ],
+  "Tere! Sinu arve on manuses.": [
+    "Здравствуйте! Ваш счёт во вложении.",
+    "Hello! Your invoice is attached."
+  ],
+  "Aitäh! Arve ei ole maksekinnitus.": [
+    "Спасибо! Счёт не подтверждает оплату.",
+    "Thank you! This invoice is not proof of payment."
+  ],
+  "Värsked apelsinid": [
+    "Свежие апельсины",
+    "Fresh oranges"
+  ],
+  "Rohelised õunad": [
+    "Зелёные яблоки",
+    "Green apples"
+  ],
+  "Avokaado": [
+    "Авокадо",
+    "Avocado"
+  ],
+  "Värsked tomatid": [
+    "Свежие томаты",
+    "Fresh tomatoes"
+  ],
+  "Apelsinimahl": [
+    "Апельсиновый сок",
+    "Orange juice"
+  ],
+  "Mineraalvesi": [
+    "Минеральная вода",
+    "Mineral water"
+  ],
+  "Tume šokolaad": [
+    "Тёмный шоколад",
+    "Dark chocolate"
+  ],
+  "Võiküpsised": [
+    "Сливочное печенье",
+    "Butter cookies"
+  ],
+  "{0} toodet  ·  Hinnad eurodes": [
+    "Товаров: {0}  ·  Цены в евро",
+    "{0} products  ·  Prices in euros"
+  ],
+  "Laos: {0}": [
+    "В наличии: {0}",
+    "Stock: {0}"
+  ],
+  "Laos on {0} tk; korvis juba {1} tk.": [
+    "В наличии: {0} шт.; в корзине: {1} шт.",
+    "Stock: {0}; already in cart: {1}."
+  ],
+  "{0} lisatud.   ": [
+    "{0} добавлен.   ",
+    "{0} added.   "
+  ],
+  "{0}Ostukorvis: {1} toodet   ·   {2} €": [
+    "{0}В корзине: {1} шт.   ·   {2} €",
+    "{0}In cart: {1} items   ·   €{2}"
+  ],
+  "Muudad toodet #{0}": [
+    "Редактирование товара №{0}",
+    "Editing product #{0}"
+  ],
+  "Kustuta „{0}”?": [
+    "Удалить «{0}»?",
+    "Delete “{0}”?"
+  ],
+  "Kontrolli laoseisu: {0}": [
+    "Проверь остаток: {0}",
+    "Check stock: {0}"
+  ],
+  "Saatmine ebaõnnestus: {0}": [
+    "Не удалось отправить: {0}",
+    "Could not send: {0}"
+  ],
+  "Sisselogimine ebaõnnestus: {0}": [
+    "Не удалось войти: {0}",
+    "Sign-in failed: {0}"
+  ],
+  "Andmebaasi avamine ebaõnnestus.\n{0}": [
+    "Не удалось открыть базу данных.\n{0}",
+    "Could not open the database.\n{0}"
+  ],
+  "{0}\nAdministraator": [
+    "{0}\nАдминистратор",
+    "{0}\nAdministrator"
+  ],
+  "{0}\nKlient": [
+    "{0}\nПокупатель",
+    "{0}\nCustomer"
+  ],
+  "Kokku: {0} €": [
+    "Итого: {0} €",
+    "Total: €{0}"
+  ],
+  "ARVE  /  {0}  /  {1}": [
+    "СЧЁТ / {0} / {1}",
+    "INVOICE / {0} / {1}"
+  ],
+  "JOOGID": [
+    "НАПИТКИ",
+    "DRINKS"
+  ],
+  "PUU- JA KÖÖGIVILJAD": [
+    "ОВОЩИ И ФРУКТЫ",
+    "FRUIT & VEGETABLES"
+  ],
+  "MAIUSTUSED": [
+    "СЛАДОСТИ",
+    "SWEETS"
+  ],
+  "nimi@näide.ee": [
+    "name@example.com",
+    "name@example.com"
+  ],
+  "Pildid|*.jpg;*.jpeg;*.png": [
+    "Изображения|*.jpg;*.jpeg;*.png",
+    "Images|*.jpg;*.jpeg;*.png"
+  ],
+  "PDF-arve|*.pdf": [
+    "PDF-счёт|*.pdf",
+    "PDF invoice|*.pdf"
+  ]
+}
