@@ -8,21 +8,26 @@ internal static class Program
     static void Main()
     {
         ApplicationConfiguration.Initialize();
-        Kaustad.Loo();
-        L.Load();
-
         try
         {
+            Kaustad.Loo();
+            L.Load();
             using var db = new ToodedContext();
-            var fresh = false;
-            if (db.Database.IsSqlite()) fresh = db.Database.EnsureCreated();
+            var fresh = false; var upgraded = false;
+            if (db.Database.IsSqlite())
+            {
+                fresh = db.Database.EnsureCreated();
+                if (!fresh) upgraded = Andmebaas.UuendaSqlite(db);
+            }
             else db.Database.Migrate();
             LooAlgkasutajad(db);
             if (fresh) DemoData.Seed(db);
+            if (upgraded) DemoData.TaidaKirjeldused(db);
+            if ((fresh || upgraded) && db.Database.IsSqlite()) DemoData.LooAjalugu(db);
         }
         catch (Exception ex)
         {
-            MessageBox.Show(L.T("Andmebaasi avamine ebaõnnestus.\n" + ex.Message), "Tooded", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Rakenduse käivitamine ebaõnnestus.\n" + ex.Message, "Tooded", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
 

@@ -10,16 +10,12 @@ internal static class L
 {
     private sealed class Binding { public string Source = "", Last = ""; public bool Busy; public string[]? Items; }
     private static readonly ConditionalWeakTable<Control, Binding> bindings = new();
-    private static readonly Dictionary<string, string[]> words = JsonSerializer.Deserialize<Dictionary<string, string[]>>(
-        File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "Assets", "translations.json")))!;
-    public static string Language { get; private set; } = "et";
+    private static readonly Lazy<Dictionary<string, string[]>> words = new(() =>
+        JsonSerializer.Deserialize<Dictionary<string, string[]>>(
+            File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "Assets", "translations.json"))) ?? new());
+    public static string Language { get; } = "et";
     private static readonly string[] codes = { "et", "ru", "en" };
-    public static void Load()
-    {
-        try { var code = File.ReadAllText(Path.Combine(Kaustad.Juur, "language.txt")).Trim(); if (codes.Contains(code)) Language = code; }
-        catch (IOException) { } catch (UnauthorizedAccessException) { }
-        SetCulture();
-    }
+    public static void Load() => SetCulture();
     private static void SetCulture()
     {
         var culture = CultureInfo.GetCultureInfo(Language == "ru" ? "ru-RU" : Language == "en" ? "en-GB" : "et-EE");
@@ -28,9 +24,9 @@ internal static class L
     public static string T(string source)
     {
         if (Language == "et" || string.IsNullOrEmpty(source)) return source;
-        if (words.TryGetValue(source, out var pair)) return pair[Language == "ru" ? 0 : 1];
+        if (words.Value.TryGetValue(source, out var pair)) return pair[Language == "ru" ? 0 : 1];
         // Dynamic status text uses explicitly marked templates, keeping product/user data intact.
-        foreach (var entry in words.Where(w => w.Key.Contains("{0}")))
+        foreach (var entry in words.Value.Where(w => w.Key.Contains("{0}")))
         {
             var pattern = "^" + Regex.Replace(Regex.Escape(entry.Key), @"\\\{(\d+)\}", m => "(?<p" + m.Groups[1].Value + ">.*?)") + "$";
             var match = Regex.Match(source, pattern, RegexOptions.Singleline);
@@ -41,25 +37,8 @@ internal static class L
         return source;
     }
     public static string F(string source, params object[] args) => string.Format(T(source), args);
-    public static void SetLanguage(string code)
-    {
-        if (!codes.Contains(code)) return;
-        Language = code; SetCulture();
-        try { Directory.CreateDirectory(Kaustad.Juur); File.WriteAllText(Path.Combine(Kaustad.Juur, "language.txt"), code); }
-        catch (IOException) { } catch (UnauthorizedAccessException) { }
-        foreach (Form form in Application.OpenForms.Cast<Form>().ToArray()) Apply(form);
-    }
-    public static ComboBox Selector()
-    {
-        var selector = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Name = "LanguageSelector", AccessibleName = "Language / Язык / Keel" };
-        selector.Items.AddRange(new object[] { "Eesti", "Русский", "English" });
-        selector.SelectedIndex = Array.IndexOf(codes, Language);
-        selector.SelectedIndexChanged += (_, _) => { if (selector.SelectedIndex >= 0 && codes[selector.SelectedIndex] != Language) SetLanguage(codes[selector.SelectedIndex]); };
-        return selector;
-    }
     public static void Apply(Control control)
     {
-        if (control.Name == "LanguageSelector") { ((ComboBox)control).SelectedIndex = Array.IndexOf(codes, Language); return; }
         if (!bindings.TryGetValue(control, out var b))
         {
             b = new Binding { Source = control is TextBox tb ? tb.PlaceholderText : control.Text };
@@ -109,7 +88,7 @@ internal static class L
             }
             else if (control is DataGridView grid)
             {
-                foreach (DataGridViewColumn column in grid.Columns) column.HeaderText = T(column.Name);
+                if (Language != "et") foreach (DataGridViewColumn column in grid.Columns) column.HeaderText = T(column.Name);
                 grid.Invalidate();
             }
             foreach (Control child in control.Controls.Cast<Control>().ToArray()) Apply(child);

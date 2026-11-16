@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+    <Compile Include="../ToodedContext.cs;../Toode.cs;../Kategooria.cs;../Kasutaja.cs;../Muuk.cs;../Ostukorv.cs;../Ostuteenus.cs;../AktiivneKasutaja.cs;../DemoSession.cs;../Andmebaas.cs;../DemoData.cs;../Soovitused.cs;../Pyhad.cs;../KategooriaTeenus.cs;../Receipt.cs;../Ladu.cs" Link="Source/%(Filename)%(Extension)" />
+    <Using Include="System.Drawing" />
+  </ItemGroup>
+</Project>

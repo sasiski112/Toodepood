@@ -12,6 +12,7 @@ public class Toode
     public decimal Hind { get; set; }
 
     public string? Pilt { get; set; }          // ? = pilt ei ole kohustuslik
+    public string? Kirjeldus { get; set; }     // täielik kirjeldus, mida näidatakse tootekaardil
 
     public int KategooriaId { get; set; }
     public Kategooria Kategooria { get; set; } = null!;

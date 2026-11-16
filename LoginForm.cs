@@ -25,11 +25,19 @@ public partial class LoginForm : Form
         Ui.Place(this, show, 442, 340, 220, 26);
         var login = Ui.Button("Logi sisse    →", Login);
         Ui.Place(this, login, 442, 387, 365, 46); AcceptButton = login;
-        Ui.Place(this, error, 442, 440, 380, 60);
-        Ui.Place(this, L.Selector(), 662, 22, 145, 30);
+        Ui.Place(this, Ui.Button("Loo uus konto", Register, false), 442, 441, 365, 40);
+        Ui.Place(this, error, 442, 490, 380, 55);
+    }
+    private void Register(object? sender, EventArgs e)
+    {
+        using var form = new RegisterForm();
+        if (form.ShowDialog(this) != DialogResult.OK) return;
+        txtEmail.Text = form.Email; txtParool.Clear(); txtParool.Focus();
+        error.ForeColor = Ui.Green; error.Text = "Konto on loodud. Logi nüüd sisse.";
     }
     private void Login(object? sender, EventArgs e)
     {
+        error.ForeColor = Color.Firebrick;
         try
         {
             using var db = new ToodedContext();
@@ -39,9 +47,14 @@ public partial class LoginForm : Form
             { error.Text = "Vale e-post või parool. Proovi uuesti."; txtParool.Clear(); txtParool.Focus(); return; }
             AktiivneKasutaja.Nimi = user.Nimi; AktiivneKasutaja.Roll = user.Roll;
             error.Text = ""; txtParool.Clear(); Hide();
-            using var main = new FormMain(); main.ShowDialog();
-            AktiivneKasutaja.Nimi = ""; AktiivneKasutaja.Roll = "";
-            Show(); txtParool.Focus();
+            try { using var main = new FormMain(); main.ShowDialog(); }
+            finally
+            {
+                Ostukorv.Tyhjenda(); Receipt.Last = null;
+                AktiivneKasutaja.Nimi = ""; AktiivneKasutaja.Roll = "";
+                AktiivneKasutaja.OnDemo = false;
+                Show(); txtParool.Focus();
+            }
         }
         catch (Exception ex) { error.Text = "Sisselogimine ebaõnnestus: " + ex.Message; }
     }

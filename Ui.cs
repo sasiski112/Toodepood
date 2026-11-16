@@ -62,10 +62,26 @@ internal sealed class ProductArt : Control
         this.product = product; photo = Kaustad.LaePilt(product.Pilt) ?? ProductPhotos.Load(product);
         DoubleBuffered = true; BackColor = Color.FromArgb(238, 241, 229);
     }
+    internal string? Silt { get; set; }
+    internal Color SiltTaust { get; set; } = Color.Firebrick;
+    internal bool Tuhm { get; set; }
     protected override void OnPaint(PaintEventArgs e)
     {
         base.OnPaint(e);
         var g = e.Graphics; g.SmoothingMode = SmoothingMode.AntiAlias;
+        Joonista(g); g.ResetTransform();
+        if (Tuhm) { using var veil = new SolidBrush(Color.FromArgb(125, 255, 255, 255)); g.FillRectangle(veil, 0, 0, Width, Height); }
+        if (!string.IsNullOrEmpty(Silt))
+        {
+            using var f = new Font("Segoe UI", 8.5f, FontStyle.Bold);
+            var size = g.MeasureString(Silt, f);
+            var rect = new RectangleF(10, 10, size.Width + 12, size.Height + 4);
+            using var bg = new SolidBrush(SiltTaust); g.FillRectangle(bg, rect);
+            g.DrawString(Silt, f, Brushes.White, rect.X + 6, rect.Y + 2);
+        }
+    }
+    private void Joonista(Graphics g)
+    {
         if (photo != null)
         {
             float scale = Math.Min((float)Width / photo.Width, (float)Height / photo.Height);
@@ -92,13 +108,22 @@ internal sealed class ProductArt : Control
             g.FillRectangle(paper, -42, -14, 84, 55);
             using var f = new Font("Segoe UI", 11, FontStyle.Bold); g.DrawString("MAGUS", f, wrap, -33, 3);
         }
-        else
+        else if (product.KategooriaId == 2)
         {
             var name = product.Toodenimetus.ToLowerInvariant();
             using var fruit = new SolidBrush(name.Contains("apels") ? Color.FromArgb(239, 155, 48) : name.Contains("tomat") ? Color.FromArgb(215, 88, 62) : Color.FromArgb(130, 164, 72));
             g.FillEllipse(fruit, -49, -39, 98, 91);
             using var leaf = new SolidBrush(Ui.Green); g.FillEllipse(leaf, 0, -53, 34, 16);
             using var shine = new Pen(Color.FromArgb(100, Color.White), 5); g.DrawArc(shine, -35, -27, 65, 62, 195, 55);
+        }
+        else
+        {
+            // Administraatori lisatud kategooriate vaikepilt: neutraalne pakend
+            using var box = new SolidBrush(Color.FromArgb(196, 170, 130)); g.FillRectangle(box, -45, -40, 90, 85);
+            using var tape = new SolidBrush(Color.FromArgb(160, 135, 98)); g.FillRectangle(tape, -8, -40, 16, 85);
+            g.FillRectangle(Brushes.White, -30, 6, 60, 26);
+            using var f = new Font("Segoe UI", 8, FontStyle.Bold); using var green = new SolidBrush(Ui.Green);
+            g.DrawString("TOODE", f, green, -22, 11);
         }
     }
     protected override void Dispose(bool disposing) { if (disposing) photo?.Dispose(); base.Dispose(disposing); }

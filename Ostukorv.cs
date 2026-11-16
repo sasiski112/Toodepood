@@ -21,11 +21,15 @@ public static class Ostukorv
     // Tagastab false, kui laos pole nii palju
     public static bool Lisa(Toode toode, int kogus)
     {
+        if (AktiivneKasutaja.OnAdmin) return false;   // administraator ei osta
         if (kogus <= 0 || (long)KogusKorvis(toode.Id) + kogus > toode.Kogus) return false;
 
         var olemas = Ridad.FirstOrDefault(r => r.Toode.Id == toode.Id);
         if (olemas != null)
+        {
             olemas.Kogus += kogus;
+            olemas.Toode = toode;
+        }
         else
             Ridad.Add(new OstukorviRida { Toode = toode, Kogus = kogus });
         return true;
